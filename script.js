@@ -53,16 +53,32 @@ const foodsWithA = friendFavorites.filter(friendFavorites => {
 
 console.log(foodsWithA);
 
-// 7. Create a new array longFoodNames for foods with names longer than 6 characters.
 
+// 7. Create a new array longFoodNames for foods with names longer than 6 characters.
+const baseline = 6;
+
+const longFoodNames = friendFavorites.filter(word => {
+  return word.length > baseline;
+});
 
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
-
+const shortFoodNames = friendFavorites.filter(word => {
+  return word.length <= baseline;
+});
 
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+console.log(longFoodNames);
+console.log(shortFoodNames);
+
+// if else to let the user know if there are more long named food or short named food
+if(longFoodNames.length > shortFoodNames.length) {
+  console.log("There are more long-named foods.");
+} else {
+  console.log("There are more short-named foods.");
+}
 
 
 // 10. STRETCH: Find the longest food name and print:
